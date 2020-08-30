@@ -1,12 +1,45 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adventour</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Booking panel -->
+    <div class="booking-panel">
+      <form action="booking_page.php">
+        <h1>Book This Tour</h1>
+        <div class="date-slot">
+          <label for="date-slot">Select Date</label>
+          <input type="date" id="date-slot" name="Date" required />
+        </div>
+
+        <div class="elem-group inlined">
+          <label for="adult">Adults</label>
+          <input
+            type="number"
+            id="adult"
+            name="total_adults"
+            placeholder="2"
+            min="1"
+            required
+          />
+        </div>
+        <div class="elem-group inlined">
+          <label for="child">Children</label>
+          <input
+            type="number"
+            id="child"
+            name="total_children"
+            placeholder="2"
+            min="0"
+            required
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
     <script src="js/script.js"></script>
-</head>
-<body>
-    
-</body>
+  </body>
 </html>
