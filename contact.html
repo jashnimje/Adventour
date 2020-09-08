@@ -10,6 +10,10 @@
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon" />
     <title>Contact us</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/1fde32b36c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -26,43 +30,72 @@
     </div>
 
     <!--Contact page-->
-    <div class="contact-container">
+    <div class="middle-container">
       <h1 class="contact-title">Contact us</h1>
+
+      <div class="form-container">
+        <form
+          class="contact-form"
+          action="mailto:jashnimje@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <h3 class="feedback-title">FEEDBACK FORM</h3>
+          <input
+            class="contact-input"
+            type="text"
+            name="Name"
+            value=""
+            placeholder="Name"
+            required
+          />
+          <input
+            class="contact-input"
+            type="email"
+            name="Email"
+            value=""
+            placeholder="E-mail"
+            required
+          />
+          <input
+            class="contact-input"
+            name="Message"
+            rows="10"
+            cols="30"
+            placeholder="Message"
+          />
+          <button class="send-button">Send Message</button>
+        </form>
+      </div>
+      <img class="map" src="./assets/img/map.png" alt="Map-location" />
     </div>
 
-    <div class="form-container">
-      <form
-        class="contact-form"
-        action="mailto:jashnimje@gmail.com"
-        method="post"
-        enctype="text/plain"
-      >
-        <h3 class="feedback-title">FEEDBACK FORM</h3>
-        <input
-          class="contact-input"
-          type="text"
-          name="Name"
-          value=""
-          placeholder="Name"
-          required
-        />
-        <input
-          class="contact-input"
-          type="email"
-          name="Email"
-          value=""
-          placeholder="E-mail"
-          required
-        />
-        <input
-          class="contact-input"
-          name="Message"
-          rows="10"
-          cols="30"
-          placeholder="Message"
-        />
-        <button class="send-button">Send Message</button>
-      </form>
+    <!--Footer-->
+    <div class="footer">
+      <div class="footer-address">
+        <h1 class="footer-heading">Address</h1>
+        <p>
+          Kanakia Road, Kanakia Park <br />
+          Mira Road <br />
+          Maharashtra 401107
+        </p>
+      </div>
+
+      <div class="footer-contact">
+        <h1 class="footer-heading">Contact</h1>
+        <p>
+          slrtce@rahuleducation.com <br />
+          022 2812 0144
+        </p>
+      </div>
+
+      <div class="footer-social">
+        <h1 class="footer-heading">-- Follow us</h1>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
     </div>
 
     <script src="js/script.js"></script>
