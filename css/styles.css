@@ -107,9 +107,11 @@ hr {
 
 /* Slideshow container */
 .slideshow-container {
-  height: 100%;
+  max-width: absolute;
   position: absolute;
   margin: auto;
+  height: fit-content;
+  overflow: hidden;
 }
 
 /* Next & previous buttons */
@@ -153,7 +155,7 @@ hr {
   text-align: center;
 }
 
-/* 
+ 
 //Commented because the dots are not proper aligned //
 
 The dots/bullets/indicators 
@@ -172,7 +174,7 @@ The dots/bullets/indicators
 .dot:hover {
   background-color: #717171;
 }
-*/
+
 
 /* Fading animation */
 .fade {
