@@ -102,7 +102,6 @@ hr {
 
 .slide-image {
   width: 100%;
-  height: 100%;
   vertical-align: middle;
 }
 
@@ -212,45 +211,41 @@ The dots/bullets/indicators
 
 /* Contact Page*/
 .middle-container {
-  position: relative;
   background-color: rgb(0, 0, 0);
-  height: 400px;
+  height: 40rem;
   width: 100%;
 }
 
 .contact-title {
   font-size: 4rem;
   color: white;
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
 }
 
-.form-container {
-  margin-top: 0;
-  max-width: 960px;
+.map {
+  float: right;
 }
 
 .contact-form {
-  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
   right: 20%;
-  width: 340px;
-  height: 440px;
+  width: 34rem;
+  height: 44rem;
   background: white;
-  border-radius: 5px;
-  padding: 20px 30px;
+  border-radius: 0.5rem;
+  padding: 2rem 3rem;
 }
 
 .feedback-title {
-  font: 15px Oswald, Arial, sans-serif;
-  margin: 10px 0;
-  padding-bottom: 10px;
+  font: 1.5rem Oswald, Arial, sans-serif;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
   color: black;
 }
 
 .contact-input {
   width: 100%;
-  padding: 50px 0 10px 0;
+  padding: 5rem 0 1rem 0;
   box-sizing: border-box;
   background: none;
   outline: none;
@@ -258,18 +253,18 @@ The dots/bullets/indicators
   border: 0;
   font-family: "Montserrat", sans-serif;
   transition: all 0.3s;
-  border-bottom: 2px solid #303030;
+  border-bottom: 0.2rem solid #303030;
 }
 
 .contact-input:focus {
-  border-bottom: 2px solid #78788c;
+  border-bottom: 0.2rem solid #78788c;
 }
 
 p:before {
   content: attr(type);
   display: block;
-  margin: 28px 0 0;
-  font-size: 14px;
+  margin: 2.8rem 0 0;
+  font-size: 1.4rem;
   color: #5a5a5a;
 }
 
@@ -277,13 +272,13 @@ p:before {
   background-color: black;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 1.5rem 3.2rem;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
-  margin: 50px 2px;
+  font-size: 1.6rem;
+  margin: 5rem 0.2rem;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   float: right;
   font-family: "Montserrat", sans-serif;
   transition: all 0.3s;
@@ -296,7 +291,7 @@ p:before {
 
 .footer {
   color: rgb(117, 117, 117);
-  padding: 0px 20px;
+  padding: 0rem 2rem;
 }
 
 .footer-heading {
@@ -309,24 +304,70 @@ p:before {
 
 .footer-address {
   float: left;
-  padding: 30px 40px;
+  padding: 3rem 4rem;
 }
 
 .footer-contact {
   float: left;
-  padding: 30px 40px;
+  padding: 3rem 4rem;
 }
 
 .footer-social {
   float: left;
-  padding: 30px 40px;
+  padding: 3rem 4rem;
 }
 
 .fab {
-  padding: 10px 5px;
-  font-size: 25px;
+  padding: 1rem 0.5rem;
+  font-size: 2.5rem;
 }
 
 .fab:hover {
   opacity: 0.7;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
 }
