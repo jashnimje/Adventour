@@ -1,67 +1,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta name="keywords" content="HTML, CSS, JavaScript" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta
       name="Adventour, Tours and Travels"
       content="An Ultimate guide for all travel needs."
-    >
+    />
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon" />
     <title>Adventour</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body>
-    <!--Slideshow-->
-    <div class="body">
-      <div class="slideshow-container">
-        <div class="mySlides fade">
-          <img class="slide-image" src="./assets/img/Taj-Mahal.jpg" />
-          <div class="slide-text">Taj Mahal</div>
-        </div>
-
-        <div class="mySlides fade">
-          <img class="slide-image" src="./assets/img/Kerala.jpg" />
-          <div class="slide-text">Kerala</div>
-        </div>
-
-        <div class="mySlides fade">
-          <img class="slide-image" src="./assets/img/Kashmir.jpg" />
-          <div class="slide-text">Kashmir</div>
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </div>
-      <br />
-      <!--
-      <div style="text-align: justify">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-    </div>-->
-
     <!--Navigation Bar-->
-    <div class="header">
-      <a href="#logo" class="logo">Adventour</a>
-      <div class="header-right">
-        <a class="active" href="./index.html">Home</a>
-        <a href="./explore.html">Explore</a>
-        <a href="./blog.html">Blog</a>
-        <a href="./contact.html">Contact</a>
-        <a href="./about.html">About</a>
+    <nav>
+      <div id="nav-bar" class="navbar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <ul>
+          <li><a href="./index.html" class="active">Home</a></li>
+          <li><a href="./explore.html">Explore</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-4"></div>
+      <span class="burger" onclick="openNav()">&#9776;</span>
+      <h1 class="logo">Adventour</h1>
+    </nav>
 
-      <div class="col-4"></div>
-
-      <div class="col-4"></div>
-    </div>
+    <!--Navigation-->
 
     <!--Footer-->
     <div class="footer"></div>
