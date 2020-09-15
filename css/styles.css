@@ -45,6 +45,11 @@ hr {
 }
 
 /*Navigation Bar*/
+nav {
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
 .navbar {
   height: 100%;
   width: 0;
@@ -52,13 +57,18 @@ hr {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: rgb(20, 20, 20);
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 6rem;
 }
 
-.navbar a {
+.navbar ul {
+  text-decoration-style: none;
+}
+
+.navbar a,
+.closebtn {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -67,7 +77,8 @@ hr {
   transition: 0.3s;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.closebtn:hover {
   color: #f1f1f1;
 }
 
@@ -75,31 +86,56 @@ hr {
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  font-size: 25px;
+  margin: 1rem;
 }
 
 .burger {
-  font-size: 30px;
+  display: inline;
+  font-size: 3rem;
   cursor: pointer;
-  padding: 1rem;
-  background-color: #ffffff;
-  border-radius: 5px;
+  margin: 1rem;
 }
 
 .logo {
   display: inline;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 5px;
   background-color: rgb(165, 165, 165);
 }
 
-@media screen and (max-height: 450px) {
-  .navbar {
-    padding-top: 15px;
+@media only screen and (min-width: 768px) {
+  .burger,
+  .navbar .closebtn {
+    display: none;
   }
+
+  nav {
+    padding: 1rem;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .navbar {
+    all: unset;
+    overflow-x: visible;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .navbar ul li {
+    display: inline-block;
+    text-align: right;
+  }
+
   .navbar a {
-    font-size: 18px;
+    padding: 0 1rem;
+    transition: none;
   }
 }
 

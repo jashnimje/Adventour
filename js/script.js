@@ -1,8 +1,8 @@
 // Navigation
 function openNav() {
-  document.getElementById("nav-bar").style.width = "250px";
+  document.getElementById("navbar").style.width = "250px";
 }
 
 function closeNav() {
-  document.getElementById("nav-bar").style.width = "0";
+  document.getElementById("navbar").style.width = "0";
 }

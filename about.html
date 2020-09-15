@@ -18,17 +18,31 @@
 
   <body>
     <!--Navigation Bar-->
-    <div class="header">
-      <a href="#logo" class="logo">Adventour</a>
-      <div class="header-right">
-        <a href="./index.html">Home</a>
-        <a href="./explore.html">Explore</a>
-        <a href="./blog.html">Blog</a>
-        <a href="./contact.html">Contact</a>
-        <a class="active" href="./about.html">About</a>
+    <nav>
+      <div class="burger">
+        <i class="fas fa-bars" onclick="openNav()"></i>
       </div>
-    </div>
 
+      <h1 class="logo">Adventour</h1>
+
+      <div id="navbar" class="navbar">
+        <i
+          class="fas fa-times closebtn"
+          href="javascript:void(0)"
+          onclick="closeNav()"
+        ></i>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./explore.html">Explore</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./about.html" class="active">About</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--About Section-->
     <div class="about-section">
       <h2>About us</h2>
       <p>Adventour | Tours and Travel Guide.</p>
