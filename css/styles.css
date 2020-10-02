@@ -21,27 +21,32 @@ h1 {
 }
 
 h2 {
-  font-size: 5rem;
-}
-
-h3 {
-  font-size: 3.5rem;
-}
-
-h4 {
-  font-size: 3rem;
-}
-
-p {
   font-size: 2.5rem;
 }
 
+h3 {
+  font-size: 3.2rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+p,
+a,
 li {
-  font-size: 2rem;
+  color: #cacaca;
+  line-height: 2rem;
+  font-size: 1.5rem;
 }
 
 hr {
   border-color: rgba(255, 255, 255, 0.8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 /*Navigation Bar*/
@@ -69,12 +74,13 @@ nav {
 
 .navbar a,
 .closebtn {
-  padding: 8px 8px 8px 32px;
+  padding: 8px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 2rem;
   color: #818181;
   display: block;
   transition: 0.3s;
+  text-align: center;
 }
 
 .navbar a:hover,
@@ -106,60 +112,12 @@ nav {
   background-color: rgb(165, 165, 165);
 }
 
-@media only screen and (min-width: 768px) {
-  .burger,
-  .navbar .closebtn {
-    display: none;
-  }
-
-  nav {
-    padding: 1rem;
-    overflow: visible;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .navbar {
-    all: unset;
-    overflow-x: visible;
-  }
-
-  .navbar ul {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .navbar ul li {
-    display: inline-block;
-    text-align: right;
-    padding: 0 1rem;
-  }
-
-  .navbar a {
-    padding: 0 1rem;
-    transition: none;
-  }
-
-  .navbar a:hover,
-  .closebtn:hover {
-    color: #000000;
-    font-weight: normal;
-  }
-
-  .navbar .active {
-    color: #000000;
-    font-weight: 600;
-  }
-}
-
 /* Contact Page*/
 .middle-container {
   background-color: rgb(0, 0, 0);
   background: url("../assets/img/map.png");
   background-repeat: no-repeat;
   background-position: top;
-  height: 65%;
   width: 100%;
 }
 
@@ -169,6 +127,7 @@ nav {
   padding: 4rem;
   color: white;
   text-shadow: 2px 2px 4px #000000;
+  grid-column: 1/13;
 }
 
 .contact-title h1 span {
@@ -179,7 +138,8 @@ nav {
 }
 
 .form-container {
-  float: left;
+  grid-column: 1/13;
+  width: 100%;
 }
 
 .contact-form {
@@ -259,19 +219,11 @@ p:before {
   font-size: 1.2rem;
 }
 
-.footer-address {
-  float: left;
-  padding: 2rem 4rem;
-}
-
-.footer-contact {
-  float: left;
-  padding: 2rem 4rem;
-}
-
+.footer-address,
+.footer-contact,
 .footer-social {
-  float: left;
-  padding: 2rem 4rem;
+  grid-column: 1/13;
+  padding: 2rem;
 }
 
 .fab {
@@ -291,24 +243,10 @@ p:before {
   color: white;
 }
 
-.about-section p,
-.member p {
-  font-size: 2rem;
-}
-
 .team-title {
   color: #fff;
   text-align: center;
   padding: 2rem;
-}
-
-.team-member img {
-  border-radius: 1.6rem 1.6rem 0 0;
-  width: 100%;
-}
-
-.team-member .col-4 {
-  margin: 1rem 0;
 }
 
 .card {
@@ -316,111 +254,118 @@ p:before {
   border-radius: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 2.5rem;
+  padding: 1rem;
 }
 
+.member1,
+.member2,
+.member3 {
+  grid-column: 1/13;
+}
+
+/* Member Container */
+.team-member img {
+  border-radius: 1.6rem 1.6rem 0 0;
+  width: 100%;
+}
 .member {
   padding: 0 1.2rem;
   text-align: center;
 }
-
 .member h3 {
   font-weight: 800;
   font-size: 2rem;
   padding: 1rem 0;
   text-align: center;
 }
-
+.member-title {
+  color: grey;
+}
 .member::after,
 .row::after {
   content: "";
   clear: both;
   display: table;
 }
-
-.title {
-  color: grey;
-}
-
 .member .fab {
   padding: 3rem 1rem;
   font-size: 3.5rem;
 }
-/*
-buttons when needed
-.button {
-  border: none;
-  border-radius: 1rem;
-  outline: 0;
-  display: inline-block;
-  padding: 2rem;
-  font-size: 2rem;
-  max-width: 60%;
-  color: white;
-  background-color: #000;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-  margin: 2rem;
-  transition: all 0.3s;
-}
-
-.button:hover {
-  background: #333333;
-  color: #fff;
-}
-*/
-[class*="col-"] {
-  width: 100%;
-}
 
 /* Media Queries */
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {
-    float: left;
-    width: 8.33%;
+@media only screen and (min-width: 760px) {
+  .burger,
+  .navbar .closebtn {
+    display: none;
   }
-  .col-2 {
-    float: left;
-    width: 16.66%;
+
+  nav {
+    padding: 1rem;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
-  .col-3 {
-    float: left;
-    width: 25%;
+
+  .navbar {
+    all: unset;
+    overflow-x: visible;
   }
-  .col-4 {
-    float: left;
-    width: 33.33%;
+
+  .navbar ul {
+    display: flex;
+    justify-content: space-around;
   }
-  .col-5 {
-    float: left;
-    width: 41.66%;
+
+  .navbar ul li {
+    display: inline-block;
+    text-align: right;
+    padding: 0 1rem;
   }
-  .col-6 {
-    float: left;
-    width: 50%;
+
+  .navbar a {
+    padding: 0 1rem;
+    transition: none;
   }
-  .col-7 {
-    float: left;
-    width: 58.33%;
+
+  .navbar a:hover,
+  .closebtn:hover {
+    color: #000000;
+    font-weight: normal;
   }
-  .col-8 {
-    float: left;
-    width: 66.66%;
+
+  .navbar .active {
+    color: #000000;
+    font-weight: 600;
   }
-  .col-9 {
-    float: left;
-    width: 75%;
+
+  .member1,
+  .footer-address {
+    grid-column: 1/5;
+    grid-row: 1;
   }
-  .col-10 {
-    float: left;
-    width: 83.33%;
+  .member2,
+  .footer-contact {
+    grid-column: 5/9;
+    grid-row: 1;
   }
-  .col-11 {
-    float: left;
-    width: 91.66%;
+  .member3,
+  .footer-social {
+    grid-column: 9/13;
+    grid-row: 1;
   }
-  .col-12 {
-    width: 100%;
+
+  .footer-address,
+  .footer-contact,
+  .footer-social {
+    padding: 0;
+  }
+
+  .contact-title {
+    grid-column: 1/7;
+  }
+
+  .form-container {
+    grid-column: 7/12;
   }
 }
