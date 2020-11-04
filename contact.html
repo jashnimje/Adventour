@@ -34,10 +34,95 @@
           <li><a href="./blog.html">Blog</a></li>
           <li><a href="./contact.html" class="active">Contact</a></li>
           <li><a href="./about.html">About</a></li>
-          <li><a href="#">Login</a></li>
+          <li class="logged-in">
+            <a
+              href="#"
+              class="modal-trigger"
+              onclick="document.getElementById('modal-account').style.display='block'"
+              >Account</a
+            >
+          </li>
+          <li class="logged-in">
+            <a href="#" id="logout">Logout</a>
+          </li>
+          <li class="logged-out">
+            <a
+              href="#"
+              class="modal-trigger"
+              onclick="document.getElementById('modal-login').style.display='block'"
+              >Login</a
+            >
+          </li>
+          <li class="logged-out">
+            <a
+              href="#"
+              class="modal-trigger"
+              onclick="document.getElementById('modal-signup').style.display='block'"
+              >Sign up</a
+            >
+          </li>
         </ul>
       </div>
     </nav>
+
+    <!-- SIGN UP MODAL -->
+    <div id="modal-signup" class="modal">
+      <div class="modal-content animate">
+        <h4>Sign up</h4>
+        <br />
+        <form id="signup-form">
+          <div class="input-field">
+            <input
+              type="email"
+              id="signup-email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="input-field">
+            <input
+              type="password"
+              id="signup-password"
+              placeholder="Choose password"
+              required
+            />
+          </div>
+          <button>Sign up</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- LOGIN MODAL -->
+    <div id="modal-login" class="modal">
+      <div class="modal-content animate">
+        <h4>Login</h4>
+        <br />
+        <form id="login-form">
+          <div class="input-field">
+            <input type="email" id="login-email" placeholder="Email" required />
+          </div>
+          <div class="input-field">
+            <input
+              type="password"
+              id="login-password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <button>Login</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ACCOUNT MODAL -->
+    <div id="modal-account" class="modal">
+      <div class="modal-content animate">
+        <h4>Account details</h4>
+        <br />
+        <div class="account-details"></div>
+        <div class="account-extras"></div>
+      </div>
+    </div>
 
     <!--Contact page-->
     <div class="grid middle-container">
@@ -109,6 +194,14 @@
       </div>
     </div>
 
+    <!-- JS Links -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="js/auth.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
