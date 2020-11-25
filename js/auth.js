@@ -39,20 +39,37 @@ signupForm.addEventListener("submit", (e) => {
   const password = signupForm["signup-password"].value;
 
   // sign up the user
-  auth.createUserWithEmailAndPassword(email, password).then((cred) => {
-    console.log(cred);
-    // close the signup modal & reset form
-    const modal = document.querySelector("#modal-signup");
-    modal.style.display = "none";
-    signupForm.reset();
-  });
+  auth
+    .createUserWithEmailAndPassword(email, password)
+    .then((cred) => {
+      console.log(cred);
+      // close the signup modal & reset form
+      const modal = document.querySelector("#modal-signup");
+      modal.style.display = "none";
+      signupForm.reset();
+      window.alert("Signup Successful");
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+      window.alert(errorMessage);
+    });
 });
 
 // logout
 const logout = document.querySelector("#logout");
 logout.addEventListener("click", (e) => {
   e.preventDefault();
-  auth.signOut();
+  auth
+    .signOut()
+    .then(function () {
+      window.alert("Log Out Successful");
+    })
+    .catch(function (error) {
+      console.log(error);
+      window.alert(error);
+    });
 });
 
 // login
@@ -65,10 +82,19 @@ loginForm.addEventListener("submit", (e) => {
   const password = loginForm["login-password"].value;
 
   // log the user in
-  auth.signInWithEmailAndPassword(email, password).then((cred) => {
-    // close the signup modal & reset form
-    const modal = document.querySelector("#modal-login");
-    modal.style.display = "none";
-    loginForm.reset();
-  });
+  auth
+    .signInWithEmailAndPassword(email, password)
+    .then((cred) => {
+      // close the signup modal & reset form
+      const modal = document.querySelector("#modal-login");
+      modal.style.display = "none";
+      loginForm.reset();
+      window.alert("Signin Successful");
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+      window.alert(errorMessage);
+    });
 });
