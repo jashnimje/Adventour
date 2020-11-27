@@ -87,7 +87,11 @@ nav {
 
 .navbar a:hover,
 .closebtn:hover,
-.navbar .active {
+#home .home,
+#explore .explore,
+#blog .blog,
+#contact .contact,
+#about .about {
   color: #ffffff;
   font-weight: 600;
 }
@@ -417,11 +421,14 @@ p:before {
     color: #000000;
     font-weight: normal;
   }
-  .navbar .active {
+  #home .home,
+  #explore .explore,
+  #blog .blog,
+  #contact .contact,
+  #about .about {
     color: #000000;
     font-weight: 600;
   }
-
   .member1,
   .footer-address {
     grid-column: 1/5;
@@ -436,11 +443,6 @@ p:before {
   .footer-social {
     grid-column: 9/13;
     grid-row: 1;
-  }
-  .footer-address,
-  .footer-contact,
-  .footer-social {
-    padding: 0;
   }
   .contact-title {
     grid-column: 1/7;
