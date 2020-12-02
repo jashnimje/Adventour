@@ -1,4 +1,5 @@
 /*Global CSS*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 
 html {
   font-size: 62.5%;
@@ -196,6 +197,31 @@ button:hover {
   to {
     transform: scale(1);
   }
+}
+
+/* Explore Page */
+.explore-home {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 80vh;
+  background: url(../assets/img/explore/explore-home.jpg),
+    url(../assets/img/explore/mask.jpg);
+  background-blend-mode: screen;
+  background-size: 200%;
+  background-position: center;
+}
+
+.explore-content {
+  padding: 50px;
+}
+.explore-content h2 {
+  font-size: 20vw;
+  line-height: 100%;
+  color: #ffffff;
+  font-family: "Kaushan Script", cursive;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact Page*/
@@ -428,6 +454,14 @@ p:before {
   #about .about {
     color: #000000;
     font-weight: 600;
+  }
+  .explore-home {
+    background-size: cover;
+  }
+  .explore-content h2 {
+    font-size: 12rem;
+    color: black;
+    text-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
   }
 
   .card1,
