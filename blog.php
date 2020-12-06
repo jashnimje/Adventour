@@ -21,6 +21,7 @@
         <h1>Title here.</h1>
       </div>
       <div class="description">
+        <p>Hello everyone here is the description of the blog written..</p>
         <button id="button-style">Read ahead..</button>
       </div>
     </div>

@@ -460,10 +460,14 @@ p:before {
 }
 .title1 {
   text-align: center;
+  margin-top: 10px;
 }
 .description {
   text-align: center;
+  padding-top: 0px;
+  padding-bottom: 5px;
 }
 #button-style {
   border-radius: 5px;
+  padding-top: 15px;
 }
