@@ -1,4 +1,5 @@
 /*Global CSS*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 
 html {
   font-size: 62.5%;
@@ -15,22 +16,6 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0 auto;
   padding: 0;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h3 {
-  font-size: 3.2rem;
-}
-
-h4 {
-  font-size: 2.5rem;
 }
 
 p,
@@ -123,6 +108,7 @@ nav {
 }
 
 /* Modal */
+
 .modal input[type="email"],
 .modal input[type="password"] {
   width: 100%;
@@ -132,23 +118,57 @@ nav {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
+
 /* Set a style for all buttons */
+
+.button,
 button {
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.add-button {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  display: none;
+  width: 14rem;
+  margin: 2rem 2rem auto;
   padding: 14px 20px;
-  margin: 8px 0;
   border: none;
   border-radius: 2%;
   cursor: pointer;
-  width: 100%;
+  text-decoration: none;
+  text-align: center;
 }
 
-button:hover {
+.delete-button {
+  display: none;
+}
+
+.add-button:hover,
+.button:hover {
   opacity: 0.8;
 }
 
+.nav-button {
+  width: 100%;
+}
+
+.send-button {
+  margin: 2rem;
+}
+
 /* The Modal (background) */
+
 .modal {
   display: none;
   position: fixed;
@@ -164,6 +184,7 @@ button:hover {
 }
 
 /* Modal Content/Box */
+
 .modal-content {
   background-color: #fefefe;
   margin: 5% auto 15% auto;
@@ -175,6 +196,7 @@ button:hover {
 }
 
 /* Add Zoom Animation */
+
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s;
@@ -198,29 +220,145 @@ button:hover {
   }
 }
 
+/* Explore Page */
+
+.explore-home {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 80vh;
+  background: url(../assets/img/explore/explore-home.jpg),
+    url(../assets/img/explore/mask.jpg);
+  background-blend-mode: screen;
+  background-size: 200%;
+  background-position: center;
+}
+
+.explore-content {
+  padding: 50px;
+}
+
+.explore-content h2 {
+  font-size: 20vw;
+  line-height: 100%;
+  color: #ffffff;
+  font-family: "Kaushan Script", cursive;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.explore-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  margin: 10rem auto;
+  max-width: 1280px;
+  width: 85%;
+}
+
+.explore-card {
+  display: grid;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  margin: 2px;
+  font-family: roboto;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+.card-image {
+  grid-area: image;
+  background: url("../assets/img/explore/place-image.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.card-content {
+  grid-area: text;
+  padding: 2rem;
+}
+.card-action {
+  grid-area: stats;
+}
+
+.card-content p,
+.details-container p {
+  color: grey;
+  font-size: 15px;
+  font-weight: 300;
+}
+.card-content h1 {
+  font-size: 28px;
+}
+.card-action .rating {
+  color: rgb(29, 71, 71);
+}
+
+/* Add Place Page */
+.add-container {
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 32rem;
+}
+.add-container h1 {
+  color: white;
+  font-size: 3rem;
+  margin: 2rem;
+}
+.red-text {
+  color: #f44336;
+}
+
+.details-container {
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 40rem;
+}
+
+.details-container h1 {
+  padding: 2rem;
+  font-size: 4rem;
+}
+
+.details-container .button {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.price-detail {
+  background-color: rgb(255, 187, 0);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-decoration: none;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.feature-icons .fas {
+  font-size: 3rem;
+  padding: 3rem;
+}
+
 /* Contact Page*/
+
 .middle-container {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0) !important;
   background: url("../assets/img/map.png");
   background-repeat: no-repeat;
   background-position: top;
   width: 100%;
 }
 
-.contact-title {
-  float: left;
-  font-size: 4rem;
-  padding: 4rem;
+.contact-header {
+  background-color: #000000;
+  height: 35vh;
   color: white;
-  text-shadow: 2px 2px 4px #000000;
-  grid-column: 1/13;
-}
-
-.contact-title h1 span {
-  padding: 1.2rem;
-  background-color: rgb(20, 20, 20);
-  opacity: 95%;
-  border-radius: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  padding: 3rem;
 }
 
 .form-container {
@@ -229,37 +367,36 @@ button:hover {
 }
 
 .contact-form {
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1rem auto;
   right: 20%;
   max-width: 32rem;
-  height: 40rem;
   background: white;
   border-radius: 0.5rem;
   padding: 2rem 3rem;
+  text-align: center;
 }
 
 .feedback-title {
-  font: 1.5rem Oswald, Arial, sans-serif;
-  margin: 1rem 0;
-  color: black;
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-align: center;
 }
 
-.contact-input {
+.contact-form input,
+.add-form input[type="text"] {
   width: 100%;
-  padding: 5rem 0 1rem 0;
+  padding: 1rem;
   box-sizing: border-box;
   background: none;
   outline: none;
   resize: none;
   border: 0;
-  font-family: "Montserrat", sans-serif;
+  margin: 1rem 0;
   transition: all 0.3s;
   border-bottom: 0.2rem solid #303030;
 }
 
-.contact-input:focus {
+.input:focus {
   border-bottom: 0.2rem solid #78788c;
 }
 
@@ -271,30 +408,69 @@ p:before {
   color: #5a5a5a;
 }
 
-.send-button {
-  background-color: black;
-  border: none;
-  color: white;
-  padding: 1.5rem 3.2rem;
+/* About us Page */
+
+.team-title {
+  color: #fff;
   text-align: center;
-  text-decoration: none;
-  font-size: 1.6rem;
-  margin: 4rem 0;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  float: right;
-  font-family: "Montserrat", sans-serif;
-  transition: all 0.3s;
+  padding: 2rem;
 }
 
-.send-button:hover {
-  background: #333333;
-  color: #fff;
+.card {
+  background-color: white;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 2.5rem;
+  padding: 2rem;
 }
+
+.card1,
+.card2,
+.card3 {
+  grid-column: 2/12;
+}
+
+/* Member Container */
+
+.team-member img {
+  border-radius: 1.6rem 1.6rem 0 0;
+  width: 100%;
+}
+
+.member {
+  text-align: center;
+}
+
+.member h3 {
+  font-weight: 800;
+  font-size: 2rem;
+  padding: 1rem 0 0;
+  text-align: center;
+}
+
+.member-title {
+  color: grey;
+}
+
+.member::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.member .fab {
+  padding: 1rem;
+  font-size: 3.5rem;
+}
+
+/* Footer */
 
 .footer {
   text-align: center;
   color: rgb(117, 117, 117);
+  background-color: #000000;
+  padding: 1rem;
 }
 
 .footer h3 {
@@ -312,80 +488,24 @@ p:before {
   padding: 2rem;
 }
 
-.fab {
+.fab,
+.fas {
   padding: 1rem 0.5rem;
   font-size: 2.5rem;
 }
 
-.fab:hover {
+.fab:hover,
+.fas:hover {
   opacity: 0.7;
 }
 
-/* About us Page */
-
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #3a455e;
-  color: white;
-}
-
-.team-title {
-  color: #fff;
-  text-align: center;
-  padding: 2rem;
-}
-
-.card {
-  background-color: white;
-  border-radius: 2rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 2.5rem;
-  padding: 1rem;
-}
-
-.card1,
-.card2,
-.card3 {
-  grid-column: 1/13;
-}
-
-/* Member Container */
-
-.team-member img {
-  border-radius: 1.6rem 1.6rem 0 0;
-  width: 100%;
-}
-
-.member {
-  padding: 0 1.2rem;
-  text-align: center;
-}
-
-.member h3 {
-  font-weight: 800;
-  font-size: 2rem;
-  padding: 1rem 0;
-  text-align: center;
-}
-
-.member-title {
-  color: grey;
-}
-
-.member::after,
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.member .fab {
-  padding: 3rem 1rem;
-  font-size: 3.5rem;
-}
-
 /* Media Queries */
+
+@media only screen and (min-width: 500px) {
+  .explore-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media only screen and (min-width: 760px) {
   .burger,
@@ -429,7 +549,17 @@ p:before {
     color: #000000;
     font-weight: 600;
   }
-
+  .explore-home {
+    background-size: cover;
+  }
+  .explore-content h2 {
+    font-size: 12rem;
+    color: black;
+    text-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+  }
+  .explore-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .card1,
   .footer-address {
     grid-column: 1/5;
@@ -448,6 +578,12 @@ p:before {
   }
   .form-container {
     grid-column: 7/12;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .explore-container {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -470,4 +606,54 @@ p:before {
 #button-style {
   border-radius: 5px;
   padding-top: 15px;
+}
+
+/*Slider*/
+
+#slider {
+  overflow: hidden;
+}
+
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 10s slider infinite;
+}
+
+#slider figure img {
+  width: 20%;
+  float: left;
+  height: 500px;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
 }

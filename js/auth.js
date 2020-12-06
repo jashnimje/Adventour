@@ -1,13 +1,13 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyDjKq6SOozdsTZnRvU2uucEyEmalhOWWHI",
-  authDomain: "adventour-fbee7.firebaseapp.com",
-  databaseURL: "https://adventour-fbee7.firebaseio.com",
-  projectId: "adventour-fbee7",
-  storageBucket: "adventour-fbee7.appspot.com",
-  messagingSenderId: "869049100766",
-  appId: "1:869049100766:web:a6e17efc5071e9ccc7d54f",
-  measurementId: "G-8ZEBF0VTQZ",
+  apiKey: "AIzaSyAD_q5khw-p0L29EZL3gye9R2Lf8tPn-_M",
+  authDomain: "adventour-e4702.firebaseapp.com",
+  databaseURL: "https://adventour-e4702.firebaseio.com",
+  projectId: "adventour-e4702",
+  storageBucket: "adventour-e4702.appspot.com",
+  messagingSenderId: "881724190496",
+  appId: "1:881724190496:web:efd78bd6c049292d45f145",
+  measurementId: "G-TDE3Q21ZB5",
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
