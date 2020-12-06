@@ -10,6 +10,8 @@ function closeNav() {
 const loggedOutLinks = document.querySelectorAll(".logged-out");
 const loggedInLinks = document.querySelectorAll(".logged-in");
 const accountDetails = document.querySelector(".account-details");
+const addbutton = document.querySelector(".add-button");
+const deletebutton = document.querySelector(".delete-button");
 
 const setupUI = (user) => {
   if (user) {
@@ -21,12 +23,16 @@ const setupUI = (user) => {
     // toggle user UI elements
     loggedInLinks.forEach((item) => (item.style.display = "block"));
     loggedOutLinks.forEach((item) => (item.style.display = "none"));
+    addbutton.style.display = "block";
+    deletebutton.style.display = "block";
   } else {
     // clear account info
     accountDetails.innerHTML = "";
     // toggle user elements
     loggedInLinks.forEach((item) => (item.style.display = "none"));
     loggedOutLinks.forEach((item) => (item.style.display = "block"));
+    addbutton.style.display = "none";
+    deletebutton.style.display = "none";
   }
 };
 
