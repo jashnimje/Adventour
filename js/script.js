@@ -23,16 +23,24 @@ const setupUI = (user) => {
     // toggle user UI elements
     loggedInLinks.forEach((item) => (item.style.display = "block"));
     loggedOutLinks.forEach((item) => (item.style.display = "none"));
-    addbutton.style.display = "block";
-    deletebutton.style.display = "block";
+    if (deletebutton) {
+      deletebutton.style.display = "block";
+    }
+    if (addbutton) {
+      addbutton.style.display = "block";
+    }
   } else {
     // clear account info
     accountDetails.innerHTML = "";
     // toggle user elements
     loggedInLinks.forEach((item) => (item.style.display = "none"));
     loggedOutLinks.forEach((item) => (item.style.display = "block"));
-    addbutton.style.display = "none";
-    deletebutton.style.display = "none";
+    if (deletebutton) {
+      deletebutton.style.display = "none";
+    }
+    if (addbutton) {
+      addbutton.style.display = "none";
+    }
   }
 };
 
