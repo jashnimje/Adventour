@@ -1,7 +1,7 @@
 <?php 
     include './components/db_connect.php'; 
     // Write Query
-    $sql = 'SELECT id, title, details, price, rating FROM places ORDER BY id';
+    $sql = 'SELECT id, title, details, price, rating, fname FROM places ORDER BY id';
 
     // Make Query and get result
     $result = mysqli_query($conn, $sql);
@@ -34,7 +34,9 @@
     <div class="explore-container">
         <?php foreach($places as $place) { ?>
         <div class="explore-card">
-            <div class="card-image"></div>
+            <div class="card-image">
+                <img src="<?php echo("./assets/img/explore/places/".$place['fname']) ?>" alt="">
+            </div>
             <div class="card-content">
                 <h1><?php echo htmlspecialchars($place['title']); ?></h1>
                 <p><?php 

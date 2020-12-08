@@ -1,7 +1,9 @@
 <?php 
     include './components/db_connect.php'; 
+    include './components/upload.php'; 
+
     $title = $details = $price = $rating = '';
-    $errors = array('title' => '', 'details' => '', 'price' => '', 'rating' => '');
+    $errors = array('title' => '', 'details' => '', 'price' => '', 'rating' => '', 'fname' => '');
 
     if(isset($_POST['submit'])){
         
@@ -33,6 +35,11 @@
             $details = $_POST['rating'];
         }
 
+        // check filename
+        if($fname == null) {
+            $errors['fname'] = 'An image is required';
+        }
+
         if(array_filter($errors)){
             //echo 'errors in form';
         } else {
@@ -41,9 +48,10 @@
             $details = mysqli_real_escape_string($conn, $_POST['details']);
             $price = mysqli_real_escape_string($conn, $_POST['price']);
             $rating = mysqli_real_escape_string($conn, $_POST['rating']);
+            $fname = mysqli_real_escape_string($conn, $fname);
             
             // insert data
-            $sql = "INSERT INTO places(title, details, price, rating) VALUES ('$title', '$details', '$price', '$rating')";
+            $sql = "INSERT INTO places(title, details, price, rating, fname) VALUES ('$title', '$details', '$price', '$rating', '$fname')";
 
             if(mysqli_query($conn, $sql)) {
                 // Success
@@ -85,9 +93,10 @@
                 <input type="text" placeholder="Rating" name="rating" value="<?php echo htmlspecialchars($rating) ?>">
                 <div class="red-text"><?php echo $errors['rating']; ?></div>
 
-<!-- Code to include place image in database 
+<!-- Code to include place image in database -->
                 <input type="file" name="fileToUpload" id="fileToUpload">
--->
+                <div class="red-text"><?php echo $errors['fname']; ?></div>
+
                 <input type="submit" name="submit" value="Submit" class="button">
             </form>
         </div>

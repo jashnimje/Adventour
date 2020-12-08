@@ -339,6 +339,10 @@ button {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
+  overflow: hidden;
+}
+.card-image img {
+  height: 100%;
 }
 .card-content {
   grid-area: text;
