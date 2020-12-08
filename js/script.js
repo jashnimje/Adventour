@@ -23,10 +23,10 @@ const setupUI = (user) => {
     // toggle user UI elements
     loggedInLinks.forEach((item) => (item.style.display = "block"));
     loggedOutLinks.forEach((item) => (item.style.display = "none"));
-    if (deletebutton) {
+    if (deletebutton && user.uid == "XuPWvb2qbvb1jNwypzMmKkb2UG03") {
       deletebutton.style.display = "block";
     }
-    if (addbutton) {
+    if (addbutton && user.uid == "XuPWvb2qbvb1jNwypzMmKkb2UG03") {
       addbutton.style.display = "block";
     }
   } else {

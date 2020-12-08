@@ -1,5 +1,6 @@
 /*Global CSS*/
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 
 html {
   font-size: 62.5%;
@@ -98,9 +99,9 @@ nav {
 
 .logo {
   display: inline;
-  padding: 0.8rem;
-  border-radius: 5px;
-  background-color: rgb(165, 165, 165);
+  font-family: "Sacramento", cursive;
+  font-size: 3rem;
+  color: #000000;
 }
 
 .navbar .logged-in {
