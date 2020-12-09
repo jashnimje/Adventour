@@ -9,29 +9,21 @@
         // Check title
         if(empty($_POST['title'])){
             $errors['title'] = 'A title is required';
-        } else{
-            $title = $_POST['title'];
         }
 
         // Check details
         if(empty($_POST['details'])){
             $errors['details'] = 'Some details are required';
-        } else{
-            $details = $_POST['details'];
-        }
+        } 
 
         // Check price
         if(empty($_POST['price'])){
             $errors['price'] = 'A pricing is required';
-        } else{
-            $details = $_POST['price'];
         }
 
         // Check rating
         if(empty($_POST['rating'])){
             $errors['rating'] = 'A rating is required';
-        } else{
-            $details = $_POST['rating'];
         }
 
         if(array_filter($errors)){
@@ -87,7 +79,7 @@
                 <input type="text" placeholder="Rating" name="rating" value="<?php echo htmlspecialchars($rating) ?>" required autocomplete="off">
                 <div class="red-text"><?php echo $errors['rating']; ?></div>
 
-<!-- Code to include place image in database -->
+                <!-- Code to include place image in database -->
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <div class="red-text"><?php echo $errors['fname']; ?></div>
 

@@ -15,7 +15,7 @@ if (isset($_POST["submit"])) {
   $target_dir = "assets/img/explore/places/";
 
   $extensions= array("jpeg","jpg","png");
-  print_r($fileSize);
+  
   if (in_array($file_ext, $extensions)) {
     if ($fileError === 0) {
       if ($fileSize <= 500000) {
