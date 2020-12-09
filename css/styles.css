@@ -188,11 +188,12 @@ button {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 5% auto 15% auto;
+  margin: auto;
   border: 1px solid #888;
   border-radius: 2%;
   width: 60%;
   max-width: 40rem;
+  min-width: 28rem;
   padding: 4rem;
 }
 
@@ -343,6 +344,7 @@ button {
 }
 .card-image img {
   height: 100%;
+  min-width: 100%;
 }
 .card-content {
   grid-area: text;
@@ -375,6 +377,8 @@ button {
   color: white;
   font-size: 3rem;
   margin: 2rem;
+}
+.add-form .details {
 }
 .red-text {
   color: #f44336;
@@ -478,7 +482,8 @@ button {
 }
 
 .contact-form input,
-.add-form input[type="text"] {
+.add-form input[type="text"],
+.add-form textarea {
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;

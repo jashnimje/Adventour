@@ -1,49 +1,48 @@
 <?php
-if(isset($_POST["submit"])) {
-  $target_dir = "assets/img/explore/places/";
+if (isset($_POST["submit"])) {
+
+  $file = $_FILES['fileToUpload'];
+  $filename = $file['name'];
+  $fileTmpName = $file['tmp_name'];
+  $fileSize = $file['size'];
+  $fileError = $file['error'];
+  $fileType = $file['type'];
   $fname = '';
-  $uploadOk = 1;
-  $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-  $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-  if($check !== false) {
-    echo "File is an image - " . $check["mime"] . ".";
-    $uploadOk = 1;
-  } else {
-    echo "File is not an image.";
-    $uploadOk = 0;
-  }
 
-  // Check if file already exists
-  if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
-  }
+  $tmp = explode('.', $filename);
+  $file_ext = strtolower(end($tmp));
 
-  // Check file size
-  if ($_FILES["fileToUpload"]["size"] > 500000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-  }
+  $target_dir = "assets/img/explore/places/";
 
-  // Allow certain file formats
-  if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-  && $imageFileType != "gif" ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    $uploadOk = 0;
-  }
+  $extensions= array("jpeg","jpg","png");
+  print_r($fileSize);
+  if (in_array($file_ext, $extensions)) {
+    if ($fileError === 0) {
+      if ($fileSize <= 500000) {
+        $fname = str_replace(' ', '', trim(ucwords($_POST['title']))) . "." . $file_ext;
+        $target_file = $target_dir . $fname;
 
-  // Check if $uploadOk is set to 0 by an error
-  if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-  // if everything is ok, try to upload file
-  } else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-      echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-      $fname = $_FILES["fileToUpload"]["name"];
+        // Check if file already exists
+        if (file_exists($target_file)) {
+          $fname = str_replace(' ', '', trim($_POST['title'])) . uniqid() . "." . $file_ext;
+          $target_file = $target_dir . $fname;
+        }
+
+        if (move_uploaded_file($fileTmpName, $target_file)) {
+          echo "The file ". htmlspecialchars($fname). " has been uploaded.";
+        } else {
+          $errors['fname'] = "Sorry, there was an error uploading your file.";
+        }
+        
+      } else {
+        $errors['fname'] = "Sorry, your file is too large.";
+      }
     } else {
-      echo "Sorry, there was an error uploading your file.";
+      $errors['fname'] = "An error occured while uploading a file.";
     }
+  } else {
+    $errors['fname'] = "Extension not allowed, please choose a JPEG or PNG file.";
   }
+
 }
 ?>
