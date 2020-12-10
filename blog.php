@@ -1,3 +1,20 @@
+<?php
+include './components/db_connect.php';
+// Write Query
+$sql = 'SELECT cid, ctitle, cdesc, cimg FROM cards ORDER BY cid';
+
+// Make Query and get result
+$result = mysqli_query($conn, $sql);
+
+// Fetch resulting rows as an array
+$cards = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+// Free result
+mysqli_free_result($result);
+
+// CLose connection
+mysqli_close($conn);
+?>
 <html lang="en">
 
 <head>
@@ -12,65 +29,27 @@
 
     <img src="./assets/img/Homepage.png" width="100%" alt="" class="frontImage" />
   </div>
-  <div class="grid">
-    <div class="card card1">
-      <div class="image12">
-        <img src="assets\img\Slideshow\desk3.jpg" />
-      </div>
-      <div class="title1">
-        <h1>Title here.</h1>
-      </div>
-      <div class="description">
-        <p>Hello everyone here is the description of the blog written..</p>
-        <button id="button-style">Read ahead..</button>
-      </div>
-    </div>
-    <div class="card card2">
-      <div class="image12">
-        <img src="assets\img\Slideshow\desk3.jpg" />
-      </div>
-      <div class="title1">
-        <h1>Title here.</h1>
-      </div>
-      <div class="description">
-        <button id="button-style">Read ahead..</button>
-      </div>
-    </div>
-    <div class="card card3">
-      <div class="image12">
-        <img src="assets\img\Slideshow\desk3.jpg" />
-      </div>
-      <div class="title1">
-        <h1>Title here.</h1>
-      </div>
-      <div class="description">
-        <button id="button-style">Read ahead..</button>
-      </div>
-    </div>
+  <a href="add_blog.php" class="add-button">Add a Blog</a>
+  <div class="explore-container">
+    <?php foreach ($cards as $place) { ?>
+      <div class="explore-card">
+        <div class="card-image">
+          <img src="<?php echo ("./assets/img/blog/cards/" . $place['cimg']) ?>" alt="">
+        </div>
+        <div class="card-content">
+          <h1><?php echo htmlspecialchars($place['ctitle']); ?></h1>
+          <p><?php
+              if (strlen($place['cdesc']) <= 100) {
+                echo htmlspecialchars($place['cdesc']);
+              } else {
+                echo htmlspecialchars(substr($place['cdesc'], 0, 100) . '...');
+              }
+              ?></p>
 
-    <div class="card card1">
-      <div class="image12">
-        <img src="assets\img\Slideshow\desk3.jpg" />
+        </div>
       </div>
-      <div class="title1">
-        <h1>Title here.</h1>
-      </div>
-      <div class="description">
-        <button id="button-style">Read ahead..</button>
-      </div>
-    </div>
 
-    <div class="card card2">
-      <div class="image12">
-        <img src="assets\img\Slideshow\desk3.jpg" />
-      </div>
-      <div class="title1">
-        <h1>Title here.</h1>
-      </div>
-      <div class="description">
-        <button id="button-style">Read ahead..</button>
-      </div>
-    </div>
+    <?php } ?>
   </div>
   <?php include './components/footer.php'; ?>
 </body>
