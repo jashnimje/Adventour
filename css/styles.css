@@ -151,11 +151,27 @@ button {
   text-align: center;
 }
 
+.add-button2 {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  display: block;
+  width: 14rem;
+  margin: 2rem 2rem auto;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 2%;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
 .delete-button {
   display: none;
 }
 
 .add-button:hover,
+.add-button2:hover,
 .button:hover {
   opacity: 0.8;
 }

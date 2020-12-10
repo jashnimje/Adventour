@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
 
         if (mysqli_query($conn, $sql)) {
             // Success
-            header('Location: ./explore.php');
+            header('Location: ./blog.php');
         } else {
             // Error
             echo 'Error: ' . mysqli_error($conn);

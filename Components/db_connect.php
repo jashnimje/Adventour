@@ -1,7 +1,7 @@
 <?php 
 
 	// Connect to the database
-	$conn = mysqli_connect('localhost', 'admin', 'admin123', 'adventour');
+	$conn = mysqli_connect('localhost', 'root', '', 'adventour');
 
 	// Check connection
 	if(!$conn) {

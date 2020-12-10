@@ -10,6 +10,8 @@ function closeNav() {
 const loggedOutLinks = document.querySelectorAll(".logged-out");
 const loggedInLinks = document.querySelectorAll(".logged-in");
 const accountDetails = document.querySelector(".account-details");
+
+// Explore
 const addbutton = document.querySelector(".add-button");
 const deletebutton = document.querySelector(".delete-button");
 
@@ -23,6 +25,8 @@ const setupUI = (user) => {
     // toggle user UI elements
     loggedInLinks.forEach((item) => (item.style.display = "block"));
     loggedOutLinks.forEach((item) => (item.style.display = "none"));
+
+    // Explore Buttons
     if (deletebutton && user.uid == "XuPWvb2qbvb1jNwypzMmKkb2UG03") {
       deletebutton.style.display = "block";
     }
@@ -35,10 +39,12 @@ const setupUI = (user) => {
     // toggle user elements
     loggedInLinks.forEach((item) => (item.style.display = "none"));
     loggedOutLinks.forEach((item) => (item.style.display = "block"));
-    if (deletebutton) {
+
+    // Explore Buttons
+    if (deletebutton && user.uid == "XuPWvb2qbvb1jNwypzMmKkb2UG03") {
       deletebutton.style.display = "none";
     }
-    if (addbutton) {
+    if (addbutton && user.uid == "XuPWvb2qbvb1jNwypzMmKkb2UG03") {
       addbutton.style.display = "none";
     }
   }

@@ -1,7 +1,7 @@
 <?php
 include './components/db_connect.php';
 // Write Query
-$sql = 'SELECT cid, ctitle, cdesc, cimg FROM cards ORDER BY cid';
+$sql = 'SELECT id, ctitle, cdesc, cimg FROM cards ORDER BY id';
 
 // Make Query and get result
 $result = mysqli_query($conn, $sql);
@@ -29,7 +29,7 @@ mysqli_close($conn);
 
     <img src="./assets/img/Homepage.png" width="100%" alt="" class="frontImage" />
   </div>
-  <a href="add_blog.php" class="add-button">Add a Blog</a>
+  <a href="add_blog.php" class="add-button2">Add a Blog</a>
   <div class="explore-container">
     <?php foreach ($cards as $place) { ?>
       <div class="explore-card">
@@ -47,6 +47,9 @@ mysqli_close($conn);
               ?></p>
 
         </div>
+        <div class="card-action">
+              <a class="button card-details" href="details.php?id=<?php echo $place['id']?>">Details</a>
+          </div>
       </div>
 
     <?php } ?>
