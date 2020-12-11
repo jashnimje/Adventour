@@ -9,7 +9,7 @@
     <?php include './components/nav.php'; ?>
 
     <!--About Section-->
-    <div class="about-homepage">
+    <div class="homepage">
         <img src="./assets/img/about/about-home.png" width="100%" alt="" class="frontImage" />
     </div>
     <div class="team-title">
@@ -23,8 +23,8 @@
                 <h3>Khushboo Dattani</h3>
                 <p class="member-title">Web Developer</p>
                 <p>
-                    Description | Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                Aspiring engineer. I am always striving to excel in whatever tasks I take upon myself.
+                "Engineering applied in real life means excellence"
                 </p>
                 <a href="https://github.com/dattanik" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/khushboo-dattani" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -37,7 +37,10 @@
             <div class="member">
                 <h3>Jash Nimje</h3>
                 <p class="member-title">Web Developer</p>
-                <p> I am very much fond of reading and learning new stuff. I always try to read more blogs, articles and books to gain knowledge. Curiosity makes you smarter. Stay Curious</p>
+                <p> 
+                I am very much fond of reading and learning new stuff. I always try to read more blogs, articles and books to gain knowledge. 
+                "Curiosity makes you smarter. Always Stay Curious."
+                </p>
                 <a href="https://github.com/jashnimje" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/jashnimje" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.instagram.com/jashnimje/" target="_blank"><i class="fab fa-instagram"></i></a>

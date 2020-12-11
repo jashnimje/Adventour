@@ -25,30 +25,28 @@ mysqli_close($conn);
 <body id="blog">
   <?php include './components/nav.php'; ?>
   <div class="homepage">
-    <!--<div class="bg"></div> -->
-
-    <img src="./assets/img/Homepage.png" width="100%" alt="" class="frontImage" />
+    <img src="./assets/img/blog/blog-home.jpg" width="100%" alt="" class="frontImage" />
   </div>
   <a href="add_blog.php" class="add-button2">Add a Blog</a>
   <div class="explore-container">
-    <?php foreach ($cards as $place) { ?>
+    <?php foreach ($cards as $card) { ?>
       <div class="explore-card">
         <div class="card-image">
-          <img src="<?php echo ("./assets/img/blog/cards/" . $place['cimg']) ?>" alt="">
+          <img src="<?php echo ("./assets/img/blog/cards/" . $card['cimg']) ?>" alt="">
         </div>
         <div class="card-content">
-          <h1><?php echo htmlspecialchars($place['ctitle']); ?></h1>
+          <h1><?php echo htmlspecialchars($card['ctitle']); ?></h1>
           <p><?php
-              if (strlen($place['cdesc']) <= 100) {
-                echo htmlspecialchars($place['cdesc']);
+              if (strlen($card['cdesc']) <= 100) {
+                echo htmlspecialchars($card['cdesc']);
               } else {
-                echo htmlspecialchars(substr($place['cdesc'], 0, 100) . '...');
+                echo htmlspecialchars(substr($card['cdesc'], 0, 100) . '...');
               }
-              ?></p>
-
+              ?>
+            </p>
         </div>
         <div class="card-action">
-          <a class="button card-details" href="details_blog.php?id=<?php echo $place['id'] ?>">Details</a>
+          <a class="button card-details" href="details_blog.php?id=<?php echo $card['id'] ?>">Details</a>
         </div>
       </div>
 

@@ -12,7 +12,7 @@
     <div class="footer-contact">
     <h3>Contact</h3>
     <p>
-        slrtce@rahuleducation.com <br />
+        adventourjkv@gmail.com <br />
         022 2812 0144
     </p>
     </div>
