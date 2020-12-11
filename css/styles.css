@@ -404,7 +404,8 @@ button {
 }
 
 .card-content p,
-.details-container p {
+.details-container p,
+.details-container12 p {
   color: grey;
   font-size: 15px;
   font-weight: 300;
@@ -426,7 +427,8 @@ button {
   max-width: 32rem;
 }
 
-.add-container h1 {
+.add-container h1,
+.add-container12 h1 {
   color: white;
   font-size: 3rem;
   margin: 2rem;
@@ -441,12 +443,14 @@ button {
   max-width: 40rem;
 }
 
-.details-container h1 {
+.details-container h1,
+.details-container12 h1 {
   padding: 2rem;
   font-size: 4rem;
 }
 
-.details-container .button {
+.details-container .button,
+.details-container12 .button {
   margin: 2rem 0;
   width: 100%;
 }
@@ -468,7 +472,16 @@ button {
 }
 
 /* Blog */
-
+.add-container12 {
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 50rem;
+}
+.details-container12 {
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 80rem;
+}
 .image12 img {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;

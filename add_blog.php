@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
 <body id="blog">
     <?php include './components/nav.php'; ?>
 
-    <section class="add-container">
+    <section class="add-container12">
         <h1>Add your blog</h1>
         <div class="card">
 
@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
                 <input type="text" placeholder="Name of place You travelled with us.." name="title" value="<?php echo htmlspecialchars($title) ?>" required autocomplete="off">
                 <div class="red-text"><?php echo $errors['title']; ?></div>
 
-                <textarea class="details" type="text" placeholder="Your Experience.." rows="5" name="details" value="<?php echo htmlspecialchars($details) ?>"></textarea>
+                <textarea class="details" type="text" placeholder="Your Experience.." rows="10" name="details" value="<?php echo htmlspecialchars($details) ?>"></textarea>
                 <div class="red-text"><?php echo $errors['details']; ?></div>
 
 

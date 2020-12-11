@@ -48,8 +48,8 @@ mysqli_close($conn);
 
         </div>
         <div class="card-action">
-              <a class="button card-details" href="details.php?id=<?php echo $place['id']?>">Details</a>
-          </div>
+          <a class="button card-details" href="details_blog.php?id=<?php echo $place['id'] ?>">Details</a>
+        </div>
       </div>
 
     <?php } ?>
