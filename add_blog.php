@@ -59,7 +59,6 @@ if (isset($_POST['submit'])) {
                 <textarea class="details" type="text" placeholder="Your Experience.." rows="10" name="details" value="<?php echo htmlspecialchars($details) ?>"></textarea>
                 <div class="red-text"><?php echo $errors['details']; ?></div>
 
-
                 <!-- Code to include place image in database -->
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <div class="red-text"><?php echo $errors['fname']; ?></div>

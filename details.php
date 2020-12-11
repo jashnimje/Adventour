@@ -51,8 +51,8 @@
 		<div class="feature-icons">
 			<a href="#"><i class="fas fa-car"></i></a>
 			<a href="#"><i class="fas fa-plane"></i></a>
-			<a href="#"><i class="fas fa-bed"></i></i></a>
-			<a href="#"><i class="fas fa-utensils"></i></i></i></a>
+			<a href="#"><i class="fas fa-bed"></i></a>
+			<a href="#"><i class="fas fa-utensils"></i></a>
 			<a href="#"><i class="fas fa-binoculars"></i></a>
 		</div>
 		
@@ -61,6 +61,9 @@
 	<div class="details-container">
 		<div class="card">
 			<?php if($place) { ?>
+			<div>
+				<img src="<?php echo("./assets/img/explore/places/".$place['fname']) ?>" alt="">
+			</div>
 			<h1><?php echo $place['title']; ?></h1>
 			<h2>Details:</h2>
 			<p><?php echo $place['details']; ?></p>
@@ -74,7 +77,7 @@
 			</form>
 
 			<?php } else { ?>
-			<h2>No such place exists. Try Again</h2>
+				<h2>No such place exists. Try Again</h2>
 			<?php } ?>
 		</div>
 	</div>

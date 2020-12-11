@@ -38,26 +38,27 @@ if (isset($_GET['id'])) {
 <html lang="en">
 
 <head>
-	<title>Adventour | Explore</title>
+	<title>Adventour | Blog</title>
 	<?php include './components/header.php'; ?>
 </head>
 
-<body id="explore">
+<body id="blog">
 	<?php include './components/nav.php'; ?>
 	<?php if ($place) { ?>
 		<div class="contact-header">
-			<h1><?php echo $place['title']; ?> </h1>
+			<h1><?php echo $place['ctitle']; ?> </h1>
 
 		</div>
 	<?php } ?>
 	<div class="details-container12">
 		<div class="card">
 			<?php if ($place) { ?>
-				<h1><?php echo $place['title']; ?></h1>
+				<div>
+					<img src="<?php echo("./assets/img/blog/cards/".$place['cimg']) ?>" alt="">
+				</div>
+				<h1><?php echo $place['ctitle']; ?></h1>
 				<h2>Details:</h2>
-				<p><?php echo $place['details']; ?></p>
-
-				<h3 class="price-detail">Price: <?php echo $place['price']; ?></h3>
+				<p><?php echo $place['cdesc']; ?></p>
 
 				<!-- DELETE FORM -->
 				<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">

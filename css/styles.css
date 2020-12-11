@@ -22,7 +22,7 @@ body {
 p,
 a,
 li {
-  color: #cacaca;
+  color: grey;
   line-height: 2rem;
   font-size: 1.5rem;
 }
@@ -403,14 +403,6 @@ button {
   grid-area: stats;
 }
 
-.card-content p,
-.details-container p,
-.details-container12 p {
-  color: grey;
-  font-size: 15px;
-  font-weight: 300;
-}
-
 .card-content h1 {
   font-size: 28px;
 }
@@ -453,6 +445,12 @@ button {
 .details-container12 .button {
   margin: 2rem 0;
   width: 100%;
+}
+
+.details-container img,
+details-container12 img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .price-detail {

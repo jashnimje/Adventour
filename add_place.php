@@ -9,29 +9,21 @@ if (isset($_POST['submit'])) {
     // Check title
     if (empty($_POST['title'])) {
         $errors['title'] = 'A title is required';
-    } else {
-        $title = $_POST['title'];
     }
 
     // Check details
     if (empty($_POST['details'])) {
         $errors['details'] = 'Some details are required';
-    } else {
-        $details = $_POST['details'];
     }
 
     // Check price
     if (empty($_POST['price'])) {
         $errors['price'] = 'A pricing is required';
-    } else {
-        $details = $_POST['price'];
     }
 
     // Check rating
     if (empty($_POST['rating'])) {
         $errors['rating'] = 'A rating is required';
-    } else {
-        $details = $_POST['rating'];
     }
 
     if (array_filter($errors)) {
