@@ -553,9 +553,13 @@ details-container12 img {
   border-radius: 0.5rem;
 }
 
+.feature-icons {
+  padding: 1rem;
+}
+
 .feature-icons .fas {
-  font-size: 3rem;
-  padding: 3rem;
+  font-size: 2rem;
+  padding: 0.5rem;
 }
 
 /* Blog */
@@ -616,6 +620,7 @@ details-container12 img {
 }
 
 .contact-header h1 {
+  font-size: 3rem;
   margin: 1.5rem;
 }
 
@@ -761,6 +766,20 @@ p:before {
 /* Media Queries */
 
 @media only screen and (min-width: 500px) {
+  .contact-header h1 {
+    font-size: 4rem;
+    margin: 1.5rem;
+  }
+
+  .feature-icons {
+    padding: 0;
+  }
+
+  .feature-icons .fas {
+    font-size: 3rem;
+    padding: 3rem;
+  }
+
   .explore-container {
     grid-template-columns: repeat(2, 1fr);
   }
