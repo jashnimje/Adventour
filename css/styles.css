@@ -514,6 +514,7 @@ img {
   font-size: 3rem;
   margin: 2rem;
 }
+
 .red-text {
   color: #f44336;
 }
@@ -563,16 +564,23 @@ img {
 }
 
 /* Blog */
+
+.card-content .blog-title {
+  font-size: 2rem;
+}
+
 .add-container12 {
   text-align: center;
   margin: 1rem auto;
   max-width: 50rem;
 }
+
 .details-container12 {
   text-align: center;
   margin: 1rem auto;
   max-width: 80rem;
 }
+
 .image12 img {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;

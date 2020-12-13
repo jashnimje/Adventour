@@ -35,7 +35,7 @@ mysqli_close($conn);
           <img src="<?php echo ("./assets/img/blog/cards/" . $card['cimg']) ?>" alt="">
         </div>
         <div class="card-content">
-          <h1><?php echo htmlspecialchars($card['ctitle']); ?></h1>
+          <h1 class="blog-title"><?php echo htmlspecialchars($card['ctitle']); ?></h1>
           <p><?php
               if (strlen($card['cdesc']) <= 100) {
                 echo htmlspecialchars($card['cdesc']);
