@@ -58,35 +58,40 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body id="explore">
-    <?php include './components/nav.php'; ?>
+<?php include './components/nav.php'; ?>
 
-    <section class="add-container">
-        <h1>Add a Place</h1>
-        <div class="card">
+<section class="add-container">
+    <h1>Add a Place</h1>
+    <div class="card">
 
-            <form class="add-form" action="<?php echo $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data" method="POST" autocomplete="off">
-                <input type="text" placeholder="Place Name" name="title" value="<?php echo htmlspecialchars($title) ?>" required autocomplete="off">
-                <div class="red-text"><?php echo $errors['title']; ?></div>
+        <form class="add-form" action="<?php echo $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data" method="POST"
+              autocomplete="off">
+            <input type="text" placeholder="Place Name" name="title" value="<?php echo htmlspecialchars($title) ?>"
+                   required autocomplete="off">
+            <div class="red-text"><?php echo $errors['title']; ?></div>
 
-                <textarea class="details" type="text" placeholder="Details" rows="5" name="details" value="<?php echo htmlspecialchars($details) ?>"></textarea>
-                <div class="red-text"><?php echo $errors['details']; ?></div>
+            <textarea class="details" type="text" placeholder="Details" rows="5" name="details"
+                      value="<?php echo htmlspecialchars($details) ?>"></textarea>
+            <div class="red-text"><?php echo $errors['details']; ?></div>
 
-                <input type="text" placeholder="Price" name="price" value="<?php echo htmlspecialchars($price) ?>" required autocomplete="off">
-                <div class="red-text"><?php echo $errors['price']; ?></div>
+            <input type="text" placeholder="Price" name="price" value="<?php echo htmlspecialchars($price) ?>" required
+                   autocomplete="off">
+            <div class="red-text"><?php echo $errors['price']; ?></div>
 
-                <input type="text" placeholder="Rating" name="rating" value="<?php echo htmlspecialchars($rating) ?>" required autocomplete="off">
-                <div class="red-text"><?php echo $errors['rating']; ?></div>
+            <input type="text" placeholder="Rating" name="rating" value="<?php echo htmlspecialchars($rating) ?>"
+                   required autocomplete="off">
+            <div class="red-text"><?php echo $errors['rating']; ?></div>
 
-                <!-- Code to include place image in database -->
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                <div class="red-text"><?php echo $errors['fname']; ?></div>
+            <!-- Code to include place image in database -->
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <div class="red-text"><?php echo $errors['fname']; ?></div>
 
-                <input type="submit" name="submit" value="Submit" class="button">
-            </form>
-        </div>
-    </section>
+            <input type="submit" name="submit" value="Submit" class="button">
+        </form>
+    </div>
+</section>
 
-    <?php include './components/footer.php'; ?>
+<?php include './components/footer.php'; ?>
 </body>
 
 </html>
