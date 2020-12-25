@@ -1,28 +1,28 @@
 <!--Footer-->
 <div class="grid footer">
     <div class="footer-address">
-    <h3>Address</h3>
-    <p>
-        Kanakia Road, Kanakia Park <br />
-        Mira Road, Mumbai <br />
-        Maharashtra 401107
-    </p>
+        <h3>Address</h3>
+        <p>
+            Kanakia Road, Kanakia Park <br/>
+            Mira Road, Mumbai <br/>
+            Maharashtra 401107
+        </p>
     </div>
 
     <div class="footer-contact">
-    <h3>Contact</h3>
-    <p>
-        adventourjkv@gmail.com <br />
-        022 2812 0144
-    </p>
+        <h3>Contact</h3>
+        <p>
+            adventourjkv@gmail.com <br/>
+            022 2812 0144
+        </p>
     </div>
 
     <div class="footer-social">
-    <h3>-- Follow us</h3>
-    <i class="fab fa-facebook"></i>
-    <i class="fab fa-twitter"></i>
-    <i class="fab fa-instagram"></i>
-    <i class="fab fa-youtube"></i>
+        <h3>-- Follow us</h3>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
     </div>
 </div>
 

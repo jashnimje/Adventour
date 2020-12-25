@@ -16,18 +16,18 @@
             <li><a class="about" href="./about.php">About</a></li>
             <li class="logged-in">
                 <a href="#" class="modal-trigger"
-                    onclick="document.getElementById('modal-account').style.display='block'">Account</a>
+                   onclick="document.getElementById('modal-account').style.display='block'">Account</a>
             </li>
             <li class="logged-in">
                 <a href="#" id="logout">Logout</a>
             </li>
             <li class="logged-out">
                 <a href="#" class="modal-trigger"
-                    onclick="document.getElementById('modal-login').style.display='block'">Login</a>
+                   onclick="document.getElementById('modal-login').style.display='block'">Login</a>
             </li>
             <li class="logged-out">
                 <a href="#" class="modal-trigger"
-                    onclick="document.getElementById('modal-signup').style.display='block'">Sign up</a>
+                   onclick="document.getElementById('modal-signup').style.display='block'">Sign up</a>
             </li>
         </ul>
     </div>
@@ -37,13 +37,13 @@
 <div id="modal-signup" class="modal">
     <div class="modal-content animate">
         <h1>Sign up</h1>
-        <br />
+        <br/>
         <form id="signup-form">
             <div class="input-field">
-                <input type="email" id="signup-email" placeholder="Email" required />
+                <input type="email" id="signup-email" placeholder="Email" required/>
             </div>
             <div class="input-field">
-                <input type="password" id="signup-password" placeholder="Choose password" required />
+                <input type="password" id="signup-password" placeholder="Choose password" required/>
             </div>
             <button class="nav-button">Sign up</button>
         </form>
@@ -54,13 +54,13 @@
 <div id="modal-login" class="modal">
     <div class="modal-content animate">
         <h1>Login</h1>
-        <br />
+        <br/>
         <form id="login-form">
             <div class="input-field">
-                <input type="email" id="login-email" placeholder="Email" required />
+                <input type="email" id="login-email" placeholder="Email" required/>
             </div>
             <div class="input-field">
-                <input type="password" id="login-password" placeholder="Password" required />
+                <input type="password" id="login-password" placeholder="Password" required/>
             </div>
             <button class="nav-button">Login</button>
         </form>
@@ -71,7 +71,7 @@
 <div id="modal-account" class="modal">
     <div class="modal-content animate">
         <h1>Account details</h1>
-        <br />
+        <br/>
         <div class="account-details"></div>
         <div class="account-extras"></div>
     </div>
