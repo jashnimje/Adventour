@@ -2,9 +2,9 @@ name: PHP Composer
 
 on:
   push:
-    branches: [ devops ]
+    branches: [ master ]
   pull_request:
-    branches: [ devops ]
+    branches: [ master ]
 
 permissions:
   contents: read
